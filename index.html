@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Fakestore</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <h1 class="logo">FakeStore</h1>
+
+    <nav class="nav">
+      <input 
+        type="text" 
+        id="searchInput" 
+        placeholder="Buscar productos..."
+        aria-label="Buscar productos"
+      >
+
+      <select id="filtroCa">
+        <option value="all">Todas las categorías</option>
+     
+      </select>
+
+      <select id="sortSelect">
+        <option value="">Ordenar por</option>
+        <option value="price-asc">Precio: menor a mayor</option>
+        <option value="price-desc">Precio: mayor a menor</option>
+        <option value="name-asc">Nombre A-Z</option>
+        <option value="name-desc">Nombre Z-A</option>
+      </select>
+    </nav>
+  </header>
+
+  <div id="imgfront">
+    <img  id="img" src="img/imgfront.png" alt="">
+  </div>
+
+  <!-- CONTENEDOR PRINCIPAL -->
+  <main class="main-container">
+
+    <!-- LISTADO DE PRODUCTOS -->
+    <section class="productos-sesion">
+      <h2>Productos</h2>
+
+      <div class="productos-grid" id="contenedorProductos">
+      
+      </div>
+    </section>
+
+    <!-- CARRITO -->
+    <aside class="cart-section">
+      <h2>Carrito</h2>
+      <button id="btnCarrito">
+        <span class="idcontador">0</span>
+      </button>
+
+      <ul class="cart-list" id="cartItems">
+        <li class="cart-item">
+          <span>Producto</span>
+          <span>$00.00</span>
+          <button class="remove-item">✕</button>
+        </li>
+      </ul>
+
+      <div class="cartsummary">
+        <p>Total:</p>
+        <strong id="cartTotal">$0.00</strong>
+      </div>
+
+      <button class="checkout-btn">
+        Finalizar compra
+      </button>
+    </aside>
+
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 FakeStore · Proyecto académico</p>
+  </footer>
+<script type="module" src="index.js"></script>
+
+</body>
+</html>
